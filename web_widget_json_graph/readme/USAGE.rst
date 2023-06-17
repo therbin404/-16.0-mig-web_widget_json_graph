@@ -10,7 +10,7 @@ The JSON needs to be like::
 
     info = {
         "type": "line",
-        "data": {"datasets": [], "labels": []},
+        "data": {"datasets": [{}], "labels": []},
         "options": {
             "scales": {
                 "yAxes": [
@@ -34,7 +34,10 @@ The JSON needs to be like::
 
 For example::
 
-    plot_dataset = [1, 2, 3, 4, 3, 2]
+    plot_dataset = [{
+        "label": "# of Votes",
+        "data": [1, 2, 3, 4, 3, 2]
+    }]
     labels = ["Jan", "Feb", "Mar", "Apr", "May", "Jun"]
     info = {
         "type": "line",
