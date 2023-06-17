@@ -14,13 +14,13 @@ Web Widget JSON Graph
     :target: http://www.gnu.org/licenses/lgpl-3.0-standalone.html
     :alt: License: LGPL-3
 .. |badge3| image:: https://img.shields.io/badge/github-OCA%2Fweb-lightgray.png?logo=github
-    :target: https://github.com/OCA/web/tree/15.0/web_widget_json_graph
+    :target: https://github.com/OCA/web/tree/16.0/web_widget_json_graph
     :alt: OCA/web
 .. |badge4| image:: https://img.shields.io/badge/weblate-Translate%20me-F47D42.png
-    :target: https://translation.odoo-community.org/projects/web-15-0/web-15-0-web_widget_json_graph
+    :target: https://translation.odoo-community.org/projects/web-16-0/web-16-0-web_widget_json_graph
     :alt: Translate me on Weblate
 .. |badge5| image:: https://img.shields.io/badge/runbot-Try%20me-875A7B.png
-    :target: https://runbot.odoo-community.org/runbot/162/15.0
+    :target: https://runbot.odoo-community.org/runbot/162/16.0
     :alt: Try me on Runbot
 
 |badge1| |badge2| |badge3| |badge4| |badge5| 
@@ -28,7 +28,7 @@ Web Widget JSON Graph
 This module allows to load a line graph per ordered pair from an One2many or
 Many2many field.
 
-.. image:: https://raw.githubusercontent.com/OCA/web/15.0/web_widget_json_graph/static/description/widget_in_action.png
+.. image:: https://raw.githubusercontent.com/OCA/web/16.0/web_widget_json_graph/static/description/widget_in_action.png
    :width: 400px
    :alt: Widget in action
 
@@ -52,7 +52,7 @@ The JSON needs to be like::
 
     info = {
         "type": "line",
-        "data": {"datasets": [], "labels": []},
+        "data": {"datasets": [{}], "labels": []},
         "options": {
             "scales": {
                 "yAxes": [
@@ -76,7 +76,10 @@ The JSON needs to be like::
 
 For example::
 
-    plot_dataset = [1, 2, 3, 4, 3, 2]
+    plot_dataset = [{
+        "label": "# of Votes",
+        "data": [1, 2, 3, 4, 3, 2]
+    }]
     labels = ["Jan", "Feb", "Mar", "Apr", "May", "Jun"]
     info = {
         "type": "line",
@@ -115,7 +118,7 @@ Bug Tracker
 Bugs are tracked on `GitHub Issues <https://github.com/OCA/web/issues>`_.
 In case of trouble, please check there if your issue has already been reported.
 If you spotted it first, help us smashing it by providing a detailed and welcomed
-`feedback <https://github.com/OCA/web/issues/new?body=module:%20web_widget_json_graph%0Aversion:%2015.0%0A%0A**Steps%20to%20reproduce**%0A-%20...%0A%0A**Current%20behavior**%0A%0A**Expected%20behavior**>`_.
+`feedback <https://github.com/OCA/web/issues/new?body=module:%20web_widget_json_graph%0Aversion:%2016.0%0A%0A**Steps%20to%20reproduce**%0A-%20...%0A%0A**Current%20behavior**%0A%0A**Expected%20behavior**>`_.
 
 Do not contact contributors directly about support or help with technical issues.
 
@@ -164,6 +167,6 @@ Current `maintainers <https://odoo-community.org/page/maintainer-role>`__:
 
 |maintainer-luisg123v| |maintainer-frahikLV| 
 
-This module is part of the `OCA/web <https://github.com/OCA/web/tree/15.0/web_widget_json_graph>`_ project on GitHub.
+This module is part of the `OCA/web <https://github.com/OCA/web/tree/16.0/web_widget_json_graph>`_ project on GitHub.
 
 You are welcome to contribute. To learn how please visit https://odoo-community.org/page/Contribute.
